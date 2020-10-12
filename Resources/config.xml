@@ -4,12 +4,12 @@
 
     <elements>
         <element type="text">
-            <name>demoConfig</name>
-            <label lang="de">Demo Konfiguration</label>
-            <label lang="en">Demo configuration</label>
-            <value>Just a demo configuration, without any effects.</value>
-            <description lang="de">Nur ein hoffentlich hilfreicher Text.</description>
-            <description lang="en">Hopefully this text will help you.</description>
+            <name>refresh</name>
+            <label lang="de">Refresh</label>
+            <label lang="en">Aktualisierung</label>
+            <value>15</value>
+            <description lang="de">Wie oft die Menge abfragen</description>
+            <description lang="en">Time of reload</description>
         </element>
     </elements>
 

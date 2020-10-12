@@ -22,9 +22,26 @@ class Shopware_Controllers_Frontend_NeonStockInformation extends \Enlight_Contro
          * $pluginConfig = Shopware()->Container()->get('config');
         **/
 
+        $aid = $this->Request()->getParam('AID');
+
+        $stock_num = $this->container->get('neon_stock_information.services.article_stock_service')->getStock($aid);
+        
+        $shop = false;
+        if ($this->container->initialized('shop')) {
+            $shop = $this->container->get('shop');
+        }
+    
+        if (!$shop) {
+            $shop = $this->container->get('models')->getRepository(\Shopware\Models\Shop\Shop::class)->getActiveDefault();
+        }
+
+        $pluginConfig = Shopware()->Container()->get('shopware.plugin.cached_config_reader')->getByPluginName('NeonStockInformation', $shop);;
+
+        //$stock_num = rand(1,25);
 
         $output = [
-            'stock' => 999999
+            'stock' => $stock_num,
+            'config' => $pluginConfig
         ];
 
         echo json_encode($output);

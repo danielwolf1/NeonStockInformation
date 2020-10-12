@@ -1,3 +1,3 @@
-<div class="stockinfo" data-url="{url controller=NeonStockInformation action=getStock}">
-    {$sArticle|var_dump}
+<div class="stockinfo" id="NeonStockInfo" data-url="http://localhost/NeonStockInformation/getStock">
+    noch <span id="NeonStockNummer">{$sArticle.instock}</span> auf Lager.
 </div>

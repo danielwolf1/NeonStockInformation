@@ -25,7 +25,7 @@ class ArticleStockService
 
     public function getStock($ordernumer)
     {
-        return "999";
+        return rand(1,30);;
     }
 
 }
