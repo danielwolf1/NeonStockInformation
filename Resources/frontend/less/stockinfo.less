@@ -1,5 +1,16 @@
 /* Add less code here
  */
 
+ @high: #D4FB79;
+ @mid: #FEECAF;
+ @low: #FF968D;
+
+ @dark: #400;
+
 .stockinfo {
+    border: 2px solid;
+    padding: 10px;
+    &.high   { background-color: @high;border-color: @high - @dark;}
+    &.mid    { background-color: @mid;border-color: @mid - @dark;}
+    &.low    { background-color: @low;border-color: @low - @dark;}
 }

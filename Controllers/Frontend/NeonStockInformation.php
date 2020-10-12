@@ -22,9 +22,11 @@ class Shopware_Controllers_Frontend_NeonStockInformation extends \Enlight_Contro
          * $pluginConfig = Shopware()->Container()->get('config');
         **/
 
+        $pluginConfig = Shopware()->Container()->get('config');
 
         $output = [
-            'stock' => 999999
+            'stock' => 999999,
+            'config' => $pluginConfig
         ];
 
         echo json_encode($output);
